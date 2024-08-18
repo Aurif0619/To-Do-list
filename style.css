@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-image 1s ease-in-out;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+
+header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section input,
+.form-section button {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    outline: none;  
+}
+
+.form-section input {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-section button {
+    color: #ffbf00;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    padding: 5px 12px;
+}
+
+.form-section button:hover {
+    background-color: #ffbf00;
+    color: #fff;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.select select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    appearance: none;
+    background-color: #fff;
+    color: #5b49ac;
+    font-weight: bold;
+    padding-right: 40px;
+}
+
+.select select:hover,
+.select select:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.2rem;
+    color: #ffbf00;
+}
+
+.todo-container {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo {
+    background-color: #fff;
+    color: #5b49ac;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.todo.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+    background-color: #ffbf00;
+    border-radius: 50%;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+    background-color: #5b49ac;
+}
+
+.trash-btn {
+    background-color: #aaa;
+}
+
+.trash-btn:hover {
+    background-color: #5b49ac;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select :hover {
+    outline: none;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    background-color: #ffbf00;
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.color-particle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: spread 1s ease-out;
+}
+
+@keyframes spread {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
